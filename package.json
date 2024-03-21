@@ -1,0 +1,13 @@
+{
+  "name": "js-uzduotys-0318",
+  "version": "1.0.0",
+  "description": "",
+  "main": "uzduotys1.js",
+  "scripts": {
+    "js": "node --watch test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aivaras (https://github.com/aivaras23)",
+  "license": "MIT"
+}
