@@ -21,5 +21,3 @@ mas.forEach((line) => {
     })
     console.log(out);
 })
-
-// fs.readFileSync - greitesnis nuskaitymas synchroninis
