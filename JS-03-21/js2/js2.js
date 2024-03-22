@@ -27,7 +27,7 @@ async function currencyExchange(currency, amount) {
     }
     else {
         const allCurrencies = Object.keys(getList).join(', ');
-        console.log(`Jusu norimos valiutos nebuvo rasta musu sarase. \nTaciau galite rinktis viena is siu valiutu: \n${allCurrencies}`)
+        console.log(`Valiuta ${currency} neegzistuoja. \nGalite Rinktis vieną iš šių valiutų: \n${allCurrencies}`)
     }
 }
 
