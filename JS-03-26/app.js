@@ -14,7 +14,18 @@ const calculation = () => {
     }
     else {
         const KMI = (getSvoris / (getUgis ** 2)) * 10000;
-        result.innerHTML = `${KMI.toFixed(1)}`;
+        if (KMI < 18.5) {
+            result.innerHTML = `${KMI.toFixed(1)} - <span class='text-danger'>nepakankamas</span>`;
+        }
+        else if (KMI >= 18.5 && KMI < 25) {
+            result.innerHTML = `${KMI.toFixed(1)} - <span class='text-success'>normalus</span>`;
+        }
+        else if (KMI >= 25 && KMI < 30) {
+            result.innerHTML = `${KMI.toFixed(1)} - <span class='text-danger'>antsvoris</span>`;
+        }
+        else {
+            result.innerHTML = `${KMI.toFixed(1)} - <span class='text-danger'>nutukimas</span>`;
+        }
     }
 }
 
