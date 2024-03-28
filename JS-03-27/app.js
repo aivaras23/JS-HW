@@ -13,13 +13,28 @@ const showTasks = () => {
     getList.innerHTML = '';
 
     // su kiekviena prekė sukasi ciklas
-    prekiuList.forEach((item) => {
+    prekiuList.forEach((item, index) => {
         // sukuriamas elementas, klasės pavadinimas, bei priskiriamas teksto kontentas iš įvesties
         const newItem = document.createElement('li');
         newItem.className = 'list-group-item';
         newItem.textContent = item;
         // Pridėdamas naujas todo į sarašą
         getList.appendChild(newItem);
+
+
+        const deleteButton = document.createElement('button');
+        deleteButton.className = 'btn btn-info float-end text-light';
+        deleteButton.textContent = 'Ištrinti';
+        // pridėdamas mygtukas i kiekviena li sąrašą
+        newItem.appendChild(deleteButton);
+
+        deleteButton.onclick = () => {
+            console.log('Clicked', + index);
+            // panaudojamas splice metodas, kad ištrinti tam tikra index'a(sąrašą) kuris buvo paspaustas
+            prekiuList.splice(index, 1);
+            localStorage.setItem('prekiuList', JSON.stringify(prekiuList))
+            showTasks();
+        }
     })
 }
 
