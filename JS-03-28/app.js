@@ -73,8 +73,15 @@ const addTask = () => {
 
 const clearTodo = () => {
     workersDB = [];
+    total = 0;
+    avg = 0;
+    employeeCalcs = { total: total, avg: avg };
     localStorage.removeItem('workersDB');
+    localStorage.removeItem('employeeCalcs');
     showTasks();
+
+    employeeSum.textContent = `${total}€`;
+    employeeAvg.textContent = `${avg}€`;
 }
 
 addBtn.onclick = addTask;
