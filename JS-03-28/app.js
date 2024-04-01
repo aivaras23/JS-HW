@@ -44,7 +44,7 @@ const showTasks = () => {
             avg = total / workersDB.length;
 
             employeeSum.textContent = `${total}€`;
-            employeeAvg.textContent = `${avg}€`;
+            employeeAvg.textContent = `${avg.toFixed(2)}€`;
 
             const employeeCalcs = { total: total, avg: avg };
             localStorage.setItem('employeeCalcs', JSON.stringify(employeeCalcs));
@@ -79,7 +79,7 @@ const addTask = () => {
 
     showTasks();
     employeeSum.textContent = `${total}€`;
-    employeeAvg.textContent = `${avg}€`;
+    employeeAvg.textContent = `${avg.toFixed(2)}€`;
 
     employeeCalcs = { total: total, avg: avg };
     localStorage.setItem('employeeCalcs', JSON.stringify(employeeCalcs));
