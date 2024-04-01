@@ -12,7 +12,7 @@ const employeeSum = document.getElementById('employeeSum');
 const employeeAvg = document.getElementById('employeeAvg');
 
 let workersDB = [];
-let employeeCalcs = { total: 0, avg: 0 };
+let employeeCalcs = []
 
 
 const showTasks = () => {
@@ -58,6 +58,8 @@ const addTask = () => {
     avg += total / workersDB.length;
     employeeSum.textContent = `${total}€`;
     employeeAvg.textContent = `${avg}€`;
+
+    employeeCalcs = { total: total, avg: avg };
 
     localStorage.setItem('employeeCalcs', JSON.stringify(employeeCalcs));
 
