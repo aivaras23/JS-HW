@@ -12,10 +12,11 @@ const employeeSum = document.getElementById('employeeSum');
 const employeeAvg = document.getElementById('employeeAvg');
 
 let workersDB = [];
-let employeeCalcs = []
+let employeeCalcs = [];
 
 
 const showTasks = () => {
+
     workersList.innerHTML = '';
 
     workersDB.forEach((item, index) => {
@@ -28,6 +29,7 @@ const showTasks = () => {
         deleteButton.className = 'btn btn-info float-end text-light';
         deleteButton.textContent = 'Ištrinti';
         newWorker.appendChild(deleteButton);
+
 
         deleteButton.onclick = () => {
             workersDB.splice(index, 1);
@@ -67,15 +69,19 @@ const addTask = () => {
 
     workersDB.push(fullData);
 
-    showTasks();
 
-    total += getSalary;
-    avg += total / workersDB.length;
+    let total = 0;
+    for (const worker of workersDB) {
+        const salary = parseFloat(worker.split(' ')[2]);
+        total += salary;
+    }
+    avg = total / workersDB.length;
+
+    showTasks();
     employeeSum.textContent = `${total}€`;
     employeeAvg.textContent = `${avg}€`;
 
     employeeCalcs = { total: total, avg: avg };
-
     localStorage.setItem('employeeCalcs', JSON.stringify(employeeCalcs));
 
     _name.value = '';
