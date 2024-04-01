@@ -102,7 +102,7 @@ const clearTodo = () => {
     showTasks();
 
     employeeSum.textContent = `${total}€`;
-    employeeAvg.textContent = `${avg}€`;
+    employeeAvg.textContent = `${avg.toFixed(2)}€`;
 }
 
 addBtn.onclick = addTask;
