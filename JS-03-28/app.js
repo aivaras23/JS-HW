@@ -31,7 +31,22 @@ const showTasks = () => {
 
         deleteButton.onclick = () => {
             workersDB.splice(index, 1);
-            localStorage.setItem('workersDB', JSON.stringify(workersDB))
+            localStorage.setItem('workersDB', JSON.stringify(workersDB));
+
+            let total = 0;
+            for (const worker of workersDB) {
+                const salary = parseFloat(worker.split(' ')[2]);
+                total += salary;
+            }
+
+            avg = total / workersDB.length;
+
+            employeeSum.textContent = `${total}€`;
+            employeeAvg.textContent = `${avg}€`;
+
+            const employeeCalcs = { total: total, avg: avg };
+            localStorage.setItem('employeeCalcs', JSON.stringify(employeeCalcs));
+
             showTasks();
         }
     })
