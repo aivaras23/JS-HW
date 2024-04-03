@@ -3,6 +3,7 @@ const resetBtn = document.getElementById('resetBtn');
 
 const timer = document.getElementById('timer');
 
+const displayTimer = document.getElementById('displayTimer');
 
 let sec = 0;
 let min = 0;
@@ -27,10 +28,17 @@ const startTimer = () => {
             }
             timer.innerHTML = `${String(hour).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`
         }, 1000);
-    } else {
+    }
+
+    else {
         timerRunning = false;
         startBtn.textContent = 'Tęsti';
         clearInterval(interval);
+
+        const createLi = document.createElement('li');
+        createLi.innerHTML = timer.innerHTML
+        displayTimer.appendChild(createLi);
+
     }
 }
 
