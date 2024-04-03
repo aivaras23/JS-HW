@@ -8,15 +8,20 @@ const displayTimer = document.getElementById('displayTimer');
 let sec = 0;
 let min = 0;
 let hour = 0;
+let milsecs = 0;
 let interval;
 let timerRunning = false;
 
 const startTimer = () => {
     if (!timerRunning) {
         timerRunning = true;
-        startBtn.textContent = 'Stabdyti'
+        startBtn.textContent = 'Stabdyti';
         interval = setInterval(() => {
-            sec++;
+            milsecs += 10;
+            if (milsecs === 1000) {
+                milsecs = 0;
+                sec++;
+            }
             if (sec === 60) {
                 min++;
                 sec = 0;
@@ -26,8 +31,8 @@ const startTimer = () => {
                 min = 0;
                 sec = 0;
             }
-            timer.innerHTML = `${String(hour).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`
-        }, 1000);
+            timer.innerHTML = `${String(hour).padStart(2, '0')}:${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}.${String(milsecs).padStart(3, '0')}`
+        }, 10);
     }
 
     else {
