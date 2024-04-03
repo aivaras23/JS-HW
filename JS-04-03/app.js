@@ -36,7 +36,8 @@ const startTimer = () => {
         clearInterval(interval);
 
         const createLi = document.createElement('li');
-        createLi.innerHTML = timer.innerHTML
+        createLi.className = 'list-group-item fw-bold';
+        createLi.innerHTML = timer.innerHTML;
         displayTimer.appendChild(createLi);
 
     }
@@ -49,6 +50,10 @@ const resetTimer = () => {
     min = 0;
     hour = 0;
     timer.innerHTML = `00:00:00`;
+
+    while (displayTimer.firstChild) {
+        displayTimer.removeChild(displayTimer.firstChild);
+    }
 }
 
 startBtn.onclick = startTimer;
