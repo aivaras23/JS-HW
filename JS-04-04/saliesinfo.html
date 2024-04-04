@@ -23,13 +23,28 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 20vh;
+            margin-top: 50px;
         }
 
         .wrapper {
             border: 2px solid black;
             border-radius: 5px;
             padding: 2rem;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .info-div {
+            margin-top: 50px;
+        }
+
+        .info-div>ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -43,6 +58,15 @@
         </div>
         <div class="info-div">
             <h2>Informacija apie šali:</h2>
+            <ul id="countryInfo">
+                <li>Šalies pavadinimas: </li>
+                <li>Populiacija: </li>
+                <li>Šalies plotas: </li>
+                <li>Valiuta: </li>
+                <li>Kalba: </li>
+                <li>Vėliava: </li>
+                <li>Herbas: </li>
+            </ul>
         </div>
     </div>
 </body>
