@@ -9,6 +9,7 @@ fetch('https://restcountries.com/v3.1/all')
     })
     .then((data) => {
         console.log(data);
+        data.sort((a, b) => a.name.common.localeCompare(b.name.common));
         data.forEach((country) => {
             const createCountry = document.createElement('option');
             createCountry.textContent = country.name.common;
