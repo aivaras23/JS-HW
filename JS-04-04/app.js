@@ -43,8 +43,8 @@ const getCountryInfo = () => {
                         Plotas: ${info.area}km² <br>
                         Valiuta: ${currencies} <br>
                         Kalba: ${languages} <br>
-                        Veliava: <img src="${info.flags.svg}" class="image-svg"> 
-                        Herbas: <img src="${info.coatOfArms.svg}" class="image-svg">
+                        Veliava: <img src="${info.flags.svg}" alt="Flag of ${info.name.common}" class="image-svg"> 
+                        Herbas: <img src="${info.coatOfArms.svg}" alt="Coat of arms of ${info.name.common}" class="image-svg">
                         `;
                 countryInfo.appendChild(createLi);
             }))
