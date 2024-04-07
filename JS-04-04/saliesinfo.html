@@ -5,70 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Šalies informacija</title>
-    <style>
-        body,
-        body * {
-            box-sizing: border-box;
-            vertical-align: top;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 50px;
-        }
-
-        .wrapper {
-            border: 2px solid black;
-            border-radius: 5px;
-            padding: 2rem;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        .info-div {
-            margin-top: 50px;
-        }
-
-        .info-div>ul {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <div class="wrapper">
-            <h1>Įveskite šalies pavadinimą</h1>
-            <input id="country" type="text">
+            <h1>Pasirinkite šalies pavadinimą</h1>
+            <select id="showCountries">
+
+            </select>
             <button id="getInfoBtn">Gauti informacija</button>
         </div>
         <div class="info-div">
             <h2>Informacija apie šali:</h2>
             <ul id="countryInfo">
-                <li>Šalies pavadinimas: </li>
-                <li>Populiacija: </li>
-                <li>Šalies plotas: </li>
-                <li>Valiuta: </li>
-                <li>Kalba: </li>
-                <li>Vėliava: </li>
-                <li>Herbas: </li>
+
             </ul>
         </div>
     </div>
+
 </body>
 
 </html>
