@@ -26,10 +26,10 @@ class Triangle {
 
     public checkTriangle() {
         if((this.edgeA + this.edgeB) > this.edgeC) {
-            console.log('Sudaryti trikampį įmanoma');
+            return 'Sudaryti trikampį įmanoma';
         }
         else {
-            console.log('Sudaryti trikampio neimanoma');
+            return 'Sudaryti trikampio neimanoma';
         }
     }
 
@@ -67,15 +67,18 @@ class Triangle {
 let newTriangle = new Triangle(12,9,15);
 let newTriangle2 = new Triangle(16,12,19);
 
+console.log('Pirmas trikampis:');
 console.log(newTriangle.checkTriangle());
 console.log(newTriangle.toString());
 console.log(newTriangle.getPerimeter());
 console.log(`Trikampio plotis: ${newTriangle.getArea()}`);
-
+console.log('--------------------------------------------');
+console.log('Antras trikampis:');
 console.log(newTriangle2.checkTriangle());
 console.log(newTriangle2.toString());
 console.log(newTriangle2.getPerimeter());
 console.log(`Trikampio plotis: ${newTriangle2.getArea()}`);
+console.log('--------------------------------------------');
 console.log(`Ar pirmas trimapis didesnis: ${newTriangle.largerTriangle(newTriangle2)}`);
 
 
