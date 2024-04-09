@@ -29,12 +29,12 @@ class Triangle {
             console.log('Sudaryti trikampį įmanoma');
         }
         else {
-            console.log('Sudaryti trikampio neimanoma')
+            console.log('Sudaryti trikampio neimanoma');
         }
     }
 
     public toString() {
-        return `Krašinė A:${this.edgeA} Kraštinė B:${this.edgeB} Kraštinė C:${this.edgeC}`
+        return `Kraštinė A = ${this.edgeA}\nKraštinė B = ${this.edgeB}\nKraštinė C = ${this.edgeC}`
     }
 
     public getPerimeter() {
@@ -67,12 +67,12 @@ class Triangle {
 let newTriangle = new Triangle(12,9,15);
 let newTriangle2 = new Triangle(16,12,19);
 
-console.log(newTriangle2.checkTriangle());
-
+console.log(newTriangle.checkTriangle());
 console.log(newTriangle.toString());
 console.log(newTriangle.getPerimeter());
 console.log(`Trikampio plotis: ${newTriangle.getArea()}`);
 
+console.log(newTriangle2.checkTriangle());
 console.log(newTriangle2.toString());
 console.log(newTriangle2.getPerimeter());
 console.log(`Trikampio plotis: ${newTriangle2.getArea()}`);
