@@ -1,3 +1,9 @@
+const vardas =  <HTMLInputElement> document.getElementById('vardas')!;
+const pavarde =  <HTMLInputElement> document.getElementById('pavarde')!;
+const atlyginimas =  <HTMLInputElement> document.getElementById('atlyginimas')!;
+
+const addBtn = <HTMLInputElement> document.getElementById('addBtn');
+
 class Triangle {
     constructor(
         public edgeA:number, 

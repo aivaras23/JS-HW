@@ -1,3 +1,6 @@
+
+
+
 class Darbuotojas {
     constructor(
         public vardas:string,
