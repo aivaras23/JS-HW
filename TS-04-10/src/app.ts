@@ -70,7 +70,6 @@ const employees = () => {
 
     darbuotojuArr.push(naujasDarbuotojas);
 
-
     employeeList.innerHTML = '';
     darbuotojuArr.forEach((darbuotojas, index:number) => {
         const li = document.createElement('li');
@@ -91,8 +90,6 @@ const employees = () => {
 }
 
 addBtn.onclick = employees;
-
-//this expression is not constructable type 'string' has no construst signatures
 
 
 
