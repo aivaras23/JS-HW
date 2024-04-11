@@ -6,9 +6,6 @@ const employeeList = <HTMLUListElement> document.getElementById('employeeList')!
 
 const addBtn = document.getElementById('addBtn')!;
 
-
-
-
 class Darbuotojas {
     constructor(
         public vardas:string,
@@ -73,7 +70,12 @@ const employees = () => {
     employeeList.innerHTML = '';
     darbuotojuArr.forEach((darbuotojas, index:number) => {
         const li = document.createElement('li');
-        li.innerHTML = `${darbuotojas._vardas} ${darbuotojas._pavarde} ${darbuotojas._atlyginimas}€ <br> GPM:${darbuotojas.gpm()} PSD:${darbuotojas.psd()} VSD:${darbuotojas.vsd()}`;
+        li.innerHTML = `${darbuotojas._vardas} 
+                        ${darbuotojas._pavarde} 
+                        ${darbuotojas._atlyginimas}€ <br> 
+                        GPM:${darbuotojas.gpm()} 
+                        PSD:${darbuotojas.psd()} 
+                        VSD:${darbuotojas.vsd()}`;
         employeeList.appendChild(li);
 
         const dltBtn = document.createElement('button');
