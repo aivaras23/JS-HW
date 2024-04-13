@@ -9,5 +9,8 @@
   },
   "keywords": [],
   "author": "Aivaras (https://github.com/aivaras23)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
