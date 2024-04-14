@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./dist/app.js"></script>
+    <script type="module" src="./dist/app.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,11 +14,12 @@
         <div class="wrapper">
             <h1>informacija apie vardą</h1>
             <div class="wrapper-get-info">
-                <input type="text">
-                <button>Gauti Informacija</button>
+                <input id="nameInput" type="text">
+                <button id="getInfoBtn">Gauti Informacija</button>
             </div>
             <div class="information-container">
                 <h3>Informacija:</h3>
+                <ul id="result"></ul>
             </div>
         </div>
 
