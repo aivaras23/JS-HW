@@ -14,7 +14,20 @@ getInfoBtn.onclick = () => {
             console.log(data);
             getResult.innerHTML = '';
             const li = document.createElement('li');
-            li.innerHTML = `${data.count} ${data.name} ${data.country[0]} ${data.country[1]}`
+            li.innerHTML = `
+            Vardas: ${data.name} <br>
+            Surasta: ${data.count}
+            `
             getResult.appendChild(li);
+            data.country.forEach((n) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                Šalis: ${n.country_id} <br>
+                Tikimybe: ${n.probability}
+                ` 
+                getResult.appendChild(li);
+            })
         })
 };
+
+// ${data.country[0]} ${data.country[1]}
