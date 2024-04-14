@@ -10,7 +10,7 @@ getInfoBtn.onclick = () => {
         console.log(data);
         getResult.innerHTML = '';
         const li = document.createElement('li');
-        li.innerHTML = `${data.count} ${data.name} ${data.country[0]}`;
+        li.innerHTML = `${data.count} ${data.name} ${data.country[0]} ${data.country[1]}`;
         getResult.appendChild(li);
     });
 };
