@@ -1,0 +1,15 @@
+cd (failo pav)
+tsc --init
+npm init -y
+npm install --save-dev lite-server
+
+tsconfig.json
+
+-   "rootDir": "./src",
+-   "outDir": "./dist",
+-   "module": "ES2015",
+
+antras bash:
+cd (failo pav)
+tsc 
+tsc -w
