@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="d-flex justify-content-center align-items-center flex-column mt-5">
+    <div class="d-flex justify-content-center align-items-center mt-5 gap-3">
         <div class="border border-dark p-3 rounded-3 bg-success-subtle">
             <h1>Registracija</h1>
             <div class="d-flex gap-2">
@@ -53,7 +53,83 @@
             </div>
             <button id="regBtn" class="btn btn-success w-100 mt-2 fw-bold">Registruoti</button>
         </div>
+        <div class="col-md-4 align-self-start">
+            <div class="card">
+                <div class="card-header">
+                    Rezultatas
+
+                </div>
+                <div class="card-body">
+
+                    <div id="dataTable">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Vardas</th>
+                                    <th>Pavarde</th>
+                                    <th>Gimimo metai:</th>
+                                    <th>Lytis</th>
+                                    <th>El.pastas</th>
+                                    <th>Telefonas</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTableBody">
+                                <tr>
+                                    <td>Jonas</td>
+                                    <td>Jonaitis</td>
+                                    <td>2010</td>
+                                    <td>Vyras</td>
+                                    <td>Jonas222@gmail.com</td>
+                                    <td>+37077777666</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div id="editForm" style="display: none;">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Vaiko vardas:</label>
+                            <input type="text" id="vardasEdit" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Vaiko pavarde:</label>
+                            <input type="text" id="pavardeEdit" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Vaiko gimimo metai:</label>
+                            <input type="number" id="birthDateEdit" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            Lytis:
+                            <input type="radio" name="sex" value="vyras" id="genderM">Vyras <br>
+                            <input type="radio" name="sex" value="moteris" id="genderFe">Moteris <br>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">El.pastas:</label>
+                            <input type="text" id="elPastasEdit" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Telefonas:</label>
+                            <input type="text" id="phoneEdit" class="form-control">
+                        </div>
+
+
+                        <button class="btn btn-success" id="updateRegistration">Atnaujinti įrašą</button>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-success  float-end" id="loadData">Atnaujinti</button>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
     </div>
+
 </body>
 
 </html>

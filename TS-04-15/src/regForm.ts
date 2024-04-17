@@ -4,6 +4,7 @@ export interface RegistrationForm {
         gimimoMetai:number;
         gender:string;
         elPastas:string;
-        telefonoNr:number;
+        telefonoNr:string;
+        id?:string;
 
 }
