@@ -73,11 +73,11 @@ const showData = () => {
             vardasEdit.value = r.vardas;
             pavardeEdit.value = r.pavarde;
             birthDateEdit.value = r.gimimoMetai.toString();
-            if (r.gender === 'vyras') {
+            if (r.gender === 'male') {
                 genderMale.checked = true;
                 genderFemale.checked = false;
             }
-            else if (r.gender === 'moteris') {
+            else if (r.gender === 'female') {
                 genderMale.checked = false;
                 genderFemale.checked = true;
             }
